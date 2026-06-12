@@ -1,0 +1,199 @@
+# Para-minha-princesa
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Minha Princesa ❤️</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#120010;color:#fff;overflow-x:hidden}
+.screen{
+position:fixed;inset:0;display:flex;align-items:center;justify-content:center;
+background:linear-gradient(135deg,#220015,#ff4d88);z-index:9999;
+}
+.card{
+text-align:center;padding:30px;border-radius:25px;
+background:rgba(255,255,255,.12);backdrop-filter:blur(10px);
+max-width:600px;width:90%;
+}
+.btn{
+margin-top:20px;padding:15px 30px;border:none;border-radius:30px;
+font-size:20px;cursor:pointer;background:#fff;color:#ff2e75;
+animation:pulse 1.5s infinite;
+}
+@keyframes pulse{50%{transform:scale(1.08)}}
+.hidden{display:none}
+header{text-align:center;padding:40px 20px}
+h1{font-size:3rem}
+.counter,.letter{
+max-width:900px;margin:20px auto;padding:25px;border-radius:20px;
+background:rgba(255,255,255,.1)
+}
+.gallery{display:flex;justify-content:center;margin:20px}
+.gallery img{
+width:min(90vw,700px);border-radius:20px;
+box-shadow:0 0 25px rgba(255,255,255,.4)
+}
+.spotify{max-width:900px;margin:20px auto}
+.heart{
+position:fixed;top:-20px;pointer-events:none;
+animation:fall linear forwards;
+}
+@keyframes fall{to{transform:translateY(110vh)}}
+#love{
+font-size:4rem;text-align:center;margin:60px 0;
+animation:pulse 2s infinite;
+}
+</style>
+</head>
+<body>
+
+<div class="screen" id="intro">
+<div class="card">
+<h1>💌</h1>
+<h2>Para você, minha princesa ❤️</h2>
+<p style="margin-top:15px">
+Minha flufluzinha, gatinha, cagudinha e bebê 🥰
+</p>
+<button class="btn" onclick="abrirPresente()">ABRIR ❤️</button>
+</div>
+</div>
+
+<header>
+<h1>❤️Feliz Dia dos Namorados,
+                 minha cagudinha ❤️</h1>
+<p>Um presente feito com amor para você!</p>
+</header>
+
+<div class="counter" id="contador"></div>
+
+<div class="gallery">
+<img id="slide" src="https://i.supaimg.com/0f5090b0-7160-4fbc-9fe0-d1ad7b89b4fc/f0529aa9-6f90-4b4f-a72b-ddb52026a9fb.jpg">
+</div>
+
+<div class="spotify">
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2Ch7LmS7r2Gy2kc64wv3Bz"
+width="100%" height="152" frameborder="0"
+allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+</div>
+
+<div class="letter">
+<h2>💌 Carta para minha princesa</h2><br>
+<p id=
+Minha princesa, minha flufluzinha, minha gatinha, minha cagudinha, meu bebê ❤️<br><br>
+
+Hoje eu queria te entregar algo mais do que um presente. Queria te entregar palavras que representam um pouco do quanto você significa para mim.
+
+Desde o dia 14/08/2024, minha vida mudou de uma forma que eu nunca imaginei. Você entrou nela e transformou momentos simples em memórias especiais. Cada conversa, cada risada, cada instante ao seu lado se tornou algo que eu guardo com carinho dentro do meu coração.
+
+Você esteve presente nos meus dias bons e também nos difíceis. Seu carinho, seu jeito e sua companhia fizeram com que eu me sentisse mais feliz e mais completo.
+
+Eu amo cada detalhe seu, gatinha. Amo nossas conversas, nossas brincadeiras, nossos momentos juntos. Amo a forma como você faz meus dias melhores apenas por existir.
+
+Quero que você saiba que tudo isso foi feito pensando em você, xuxu. Porque você merece se sentir amada, especial e importante, exatamente da forma que é para mim.
+
+Obrigado por todos os momentos que vivemos até aqui. Obrigado por ser minha companheira, futuramente minha futura esposa e a pessoa que eu escolho amar todos os dias.
+
+Eu não sei o que o futuro reserva para nós, mas sei que quero viver cada pedacinho dele ao seu lado.
+
+Feliz Dia dos Namorados, minha princesa!🥰❤️
+
+Eu te amo infinitamente.
+<br><br>
+<b>Com amor,<br>seu futuro marido 🥰🐗❤️</b>
+</p>
+</div>
+
+<div id="love">EU TE AMO ❤️</div>
+
+<script>
+const inicio=new Date("2024-08-14T00:00:00");
+
+function atualizar(){
+ const agora=new Date();
+ let s=Math.floor((agora-inicio)/1000);
+ let d=Math.floor(s/86400);
+ let h=Math.floor((s%86400)/3600);
+ let m=Math.floor((s%3600)/60);
+ let sec=s%60;
+ document.getElementById("contador").innerHTML=
+ `<h2>💕 Estamos juntos há</h2><br><h3>${d} dias, ${h} horas, ${m} minutos e ${sec} segundos ❤️</h3>`;
+}
+setInterval(atualizar,1000);
+atualizar();
+
+const fotos=[
+"https://i.supaimg.com/0f5090b0-7160-4fbc-9fe0-d1ad7b89b4fc/f0529aa9-6f90-4b4f-a72b-ddb52026a9fb.jpg",
+
+"https://i.supaimg.com/0f5090b0-7160-4fbc-9fe0-d1ad7b89b4fc/4d3fdc7c-9338-4938-b6a3-cde30ae5c891.jpg",
+
+"https://i.supaimg.com/0f5090b0-7160-4fbc-9fe0-d1ad7b89b4fc/54a9f674-9c09-4dd0-8c43-17aa8ab3bafa.jpg",
+
+"https://i.supaimg.com/0f5090b0-7160-4fbc-9fe0-d1ad7b89b4fc/d4cc2f01-dc0b-450c-86f4-037494060817.jpg",
+
+"https://i.supaimg.com/0f5090b0-7160-4fbc-9fe0-d1ad7b89b4fc/eb51bbd5-8509-46c8-b102-886d77dfab18.jpg",
+
+"https://i.supaimg.com/0f5090b0-7160-4fbc-9fe0-d1ad7b89b4fc/0e4b6782-f7fd-44ff-b14c-3ccb43472b67.jpg"
+];
+let i=0;
+setInterval(()=>{
+ i=(i+1)%fotos.length;
+ document.getElementById("slide").src=fotos[i];
+},6000);
+
+function heartBurst(){
+ for(let i=0;i<200;i++){
+   let h=document.createElement("div");
+   h.className="heart";
+   h.innerHTML=["❤️","💕","💖","💘","💝","😻","🥰","😘","🫶","💘","💓"][Math.floor(Math.random()*6)];
+   h.style.left=Math.random()*100+"vw";
+   h.style.fontSize=(20+Math.random()*30)+"px";
+   h.style.animationDuration=(3+Math.random()*5)+"s";
+   document.body.appendChild(h);
+   setTimeout(()=>h.remove(),8000);
+ }
+}
+
+function abrirPresente(){
+ document.getElementById("intro").style.display="none";
+ heartBurst();
+}
+
+setInterval(()=>{
+ let h=document.createElement("div");
+ h.className="heart";
+ h.innerHTML="❤️";
+ h.style.left=Math.random()*100+"vw";
+ h.style.fontSize=(15+Math.random()*25)+"px";
+ h.style.animationDuration=(4+Math.random()*5)+"s";
+ document.body.appendChild(h);
+ setTimeout(()=>h.remove(),9000);
+},150);
+let explosaoFinal = false;
+
+window.addEventListener("scroll", () => {
+
+  if(
+    window.innerHeight + window.scrollY >=
+    document.body.offsetHeight - 50 &&
+    !explosaoFinal
+  ){
+
+    explosaoFinal = true;
+
+    for(let x = 0; x < 5; x++){
+
+      setTimeout(() => {
+        heartBurst();
+      }, x * 500);
+
+    }
+
+  }
+
+});
+</script>
+
+</body>
+</html>
